@@ -59,6 +59,11 @@
       "username": "",
       "password": "",
       "id": 13
+    },
+    {
+      "username": "admin",
+      "password": "1",
+      "id": 14
     }
   ],
   "heroes": [
