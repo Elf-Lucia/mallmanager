@@ -34,31 +34,31 @@ export default {
          const res = await this.$http.post('/users',this.formData)
         
             //对象解构赋值
-           const {data,meta:{msg,status}}=res.data
-          //  if(status===200){
+           //const {data,meta:{msg,status}}=res.data
+         
           //     //登陆成功
          // 如果用户没登录，直接来到url的home不行
           //登陆成功保存正确用户的token
-         localStorage.setItem('token',data.token)
-               if(status === '200'){
-              //跳转home
-            this.$router.push({name:'home'})
-              //提示成功
-              this.$message.success(msg);
-           }else{
-             this.$message.warning(msg)
-           }
-          // const {data,status}=res
-          // this.$router.push({name:'home'})
-        //  if(status === '201'){
-        //       //登陆成功
+        //  localStorage.setItem('token',data.token)
+        //        if(status === '200'){
         //       //跳转home
         //     this.$router.push({name:'home'})
         //       //提示成功
-        //       this.$message.success('msg');
-        //  }else{
-        //      this.$message.warning('msg')
+        //       this.$message.success(msg);
+        //    }else{
+        //      this.$message.warning(msg)
         //    }
+          const {data,status}=res
+          this.$router.push({name:'home'})
+         if(status === '201'){
+              //登陆成功
+              //跳转home
+            this.$router.push({name:'home'})
+              //提示成功
+              this.$message.success('msg');
+         }else{
+             this.$message.warning('msg')
+           }
      
     }
 }
