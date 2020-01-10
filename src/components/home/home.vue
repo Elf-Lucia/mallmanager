@@ -103,21 +103,21 @@
 </template>
 <script>
 export default {
-//      beforeCreate () {
-//         // 从session中获取token 判断是否有token
-//         const token = sessionStorage.getItem('token')
-//         if (!token) {
-//         // 返回登录页,token没有值
-//         this.$router.push({name: 'login'})
-//         this.message.warning('请先登录')
-//         }
-//     //有值继续渲染
-//   },
+     beforeCreate () {
+        // 从session中获取token 判断是否有token
+        const token = sessionStorage.getItem('token')
+        if (!token) {
+        // 返回登录页,token没有值
+        this.$router.push({name: 'login'})
+        this.message.warning('请先登录')
+        }
+    //有值继续渲染
+  },
   methods:{
       //点击退出，返回到登录页，并提示并清空token
       handleExit(){
           localStorage.setItem=''
-          this.$message.warning('退出成功')
+          this.$message.success('退出成功')
           this.$router.push({name:'login'})
       }
   }
