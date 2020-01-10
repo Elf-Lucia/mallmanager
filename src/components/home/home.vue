@@ -12,7 +12,7 @@
         </el-col>
         <el-col :span="2">
             <div class="grid-content bg-purple">
-                <a href="#" class="loginout">退出</a>
+                <a href="#" class="loginout" @click.prevent="handleExit()">退出</a>
             </div>
         </el-col>
     </el-row>
@@ -33,8 +33,8 @@
                 <span>用戶管理</span>
             </template>
           <el-menu-item index="/user">
-              <i class="el-icon-location"></i>
-            用戶列表
+              <i class="el-icon-success"></i>
+                 用戶列表
           </el-menu-item>
         </el-submenu>
         <!-- 权限管理-->
@@ -103,15 +103,23 @@
 </template>
 <script>
 export default {
-     beforeCreate () {
-    // 从session中获取token 判断是否有token
-    const token = sessionStorage.getItem('token')
-    if (!token) {
-      // 返回登录页,token没有值
-      this.$router.push({name: 'login'})
-      this.message.warning('请先登录')
-    }
-    //有值继续渲染
+//      beforeCreate () {
+//         // 从session中获取token 判断是否有token
+//         const token = sessionStorage.getItem('token')
+//         if (!token) {
+//         // 返回登录页,token没有值
+//         this.$router.push({name: 'login'})
+//         this.message.warning('请先登录')
+//         }
+//     //有值继续渲染
+//   },
+  methods:{
+      //点击退出，返回到登录页，并提示并清空token
+      handleExit(){
+          localStorage.setItem=''
+          this.$message.warning('退出成功')
+          this.$router.push({name:'login'})
+      }
   }
  }
 </script>
@@ -144,5 +152,8 @@ export default {
   }
   .el-submenu .el-menu-item{
       padding: 0
+  }
+    .el-container {
+    height: 100%;
   }
 </style>
