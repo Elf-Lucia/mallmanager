@@ -37,6 +37,10 @@ export default {
            //const {data,meta:{msg,status}}=res.data
           //  if(status===200){
           //     //登陆成功
+         // 如果用户没登录，直接来到url的home不行
+          //登陆成功保存正确用户的token
+          localStorage.setItem('token',data.token)
+          //
           //     //跳转home
           //    // this.$router.push({name:'home'})
           //     //提示成功
