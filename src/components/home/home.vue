@@ -18,7 +18,85 @@
     </el-row>
   </el-header>
   <el-container>
-    <el-aside width="200px">Aside</el-aside>
+    <el-aside width="200px">
+      <el-aside class="aside" width="200px">
+        <!-- default-active:默认展开项
+          :unique-opened: 只允许同时展开一项
+          :router 开启路由模式
+          开启后, 设置el-menu-item的index值 为路由标识
+        -->
+        <el-menu default-active="2-1" class="menu" :unique-opened="true" :router="true">
+        <!-- 用户管理-->
+          <el-submenu index="1">
+            <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>用戶管理</span>
+            </template>
+          <el-menu-item index="/user">
+              <i class="el-icon-location"></i>
+            用戶列表
+          </el-menu-item>
+        </el-submenu>
+        <!-- 权限管理-->
+        <el-submenu index="2">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>權限管理</span>
+        </template>
+                  <el-menu-item index="/roles">
+              <i class="el-icon-menu"></i>
+            角色列表
+          </el-menu-item>
+            <el-menu-item index="/rights">
+              <i class="el-icon-view"></i>
+            權限列表
+          </el-menu-item>
+        </el-submenu>
+        <!-- 商品管理-->
+      <el-submenu index="3">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span>商品管理</span>
+        </template>
+                  <el-menu-item index="3-1">
+              <i class="el-icon-menu"></i>
+            商品列表
+          </el-menu-item>
+            <el-menu-item index="3-1">
+              <i class="el-icon-view"></i>
+            分類參數
+          </el-menu-item>
+           <el-menu-item index="3-1">
+              <i class="el-icon-view"></i>
+            商品分類
+          </el-menu-item>
+        </el-submenu>
+        <!--订单管理-->
+        <el-submenu index="4">
+            <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>訂單管理</span>
+            </template>
+          <el-menu-item index="4-1">
+              <i class="el-icon-location"></i>
+                訂單列表
+          </el-menu-item>
+        </el-submenu>
+        <!--数据统计-->
+          <el-submenu index="5">
+            <template slot="title">
+                <i class="el-icon-location"></i>
+                <span>數據統計</span>
+            </template>
+          <el-menu-item index="5-1">
+              <i class="el-icon-location"></i>
+            數據報表
+          </el-menu-item>
+        </el-submenu>
+
+        </el-menu>
+      </el-aside>
+    </el-aside>
     <el-main>Main</el-main>
   </el-container>
 </el-container>
@@ -52,5 +130,8 @@ export default { }
   .loginout{
     text-decoration: none;
     line-height: 60px;
+  }
+  .el-submenu .el-menu-item{
+      padding: 0
   }
 </style>
