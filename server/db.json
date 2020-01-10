@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": 1
+    },
+    {
+      "id": 2,
+      "username": "sf",
+      "password": 18
+    },
+    {
+      "id": 3,
+      "username": "123",
+      "password": 18
+    },
+    {
+      "id": 4,
+      "username": "张三1",
+      "password": 18
+    },
+    {
+      "username": "张三1",
+      "password": "18",
+      "id": 6
+    }
+  ],
+  "heroes": [
+    {
+      "name": "刘备",
+      "gender": "男",
+      "id": 3
+    },
+    {
+      "name": "大乔",
+      "gender": "女",
+      "id": 4
+    },
+    {
+      "name": "3245",
+      "gender": "345",
+      "id": 6
+    },
+    {
+      "name": "沙发桑",
+      "gender": "女",
+      "id": 7
+    },
+    {
+      "name": "问题",
+      "gender": "男",
+      "id": 8
+    }
+  ]
+}
