@@ -30,10 +30,9 @@ export default {
         }
     },
     methods:{
-      handleLogin(){
-          this.$http.post('/users',this.formData)
-          .then(res=>{
-            console.log(res);
+     async handleLogin(){
+         const res = await this.$http.post('/users',this.formData)
+        
             //对象解构赋值
            //const {data,meta:{msg,status}}=res.data
           //  if(status===200){
@@ -45,21 +44,20 @@ export default {
           //  }else{
           //    this.$message.warning(msg)
           //  }
-            const {data,status}=res
-            console.log(data)
+          const {data,status}=res
+          this.$router.push({name:'home'})
          if(status === '201'){
               //登陆成功
               //跳转home
-             // this.$router.push({name:'home'})
+            this.$router.push({name:'home'})
               //提示成功
-              this.$message.success(msg);
+              this.$message.success('msg');
          }else{
-             this.$message.warning(msg)
+             this.$message.warning('msg')
            }
-         })
-      }
      
     }
+}
 }
 </script>
 <style scoped>

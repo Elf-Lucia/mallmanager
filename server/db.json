@@ -24,6 +24,11 @@
       "username": "张三1",
       "password": "18",
       "id": 6
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 7
     }
   ],
   "heroes": [
