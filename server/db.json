@@ -1,5 +1,5 @@
 {
-  "users": [
+  "login": [
     {
       "id": 1,
       "username": "admin",
@@ -24,51 +24,6 @@
       "username": "张三1",
       "password": "18",
       "id": 6
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 7
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 8
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 9
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 10
-    },
-    {
-      "username": "admin",
-      "password": "1",
-      "id": 11
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 12
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 13
-    },
-    {
-      "username": "admin",
-      "password": "1",
-      "id": 14
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 15
     }
   ],
   "heroes": [
@@ -97,5 +52,48 @@
       "gender": "男",
       "id": 8
     }
-  ]
+  ],
+
+    "users": [
+      {
+        "user_id": "1",
+        "username": "admin",
+        "qq_open_id": "",
+        "password": "123",
+        "email": "w@zce.me",
+        "user_email_code": "1242d9b5",
+        "is_active": "否",
+        "user_sex": "男",
+        "user_qq": "",
+        "mobile": "353543",
+        "user_xueli": "本科",
+        "user_hobby": "",
+        "user_introduce": "",
+        "create_time": "20200111",
+        "update_time": "1512033129",
+        "mg_state":true,
+        "role_name":"主管"
+
+      },
+      {
+        "user_id": "11",
+        "username": "ww",
+        "qq_open_id": "",
+        "password": "123456",
+        "email": "i@zce.me",
+        "user_email_code": "f9a9d0cc",
+        "is_active": "是",
+        "user_sex": "女",
+        "user_qq": "1231231211",
+        "mobile": "12313211",
+        "user_xueli": "博士",
+        "user_hobby": "123123",
+        "user_introduce": "123123123",
+        "create_time": "20190503",
+        "update_time": "1512122098",
+        "mg_state":true,
+        "role_name":"主管"
+      }
+    ]
+
 }

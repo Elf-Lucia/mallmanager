@@ -31,7 +31,7 @@ export default {
     },
     methods:{
      async handleLogin(){
-         const res = await this.$http.post('/users',this.formData)
+         const res = await this.$http.post('/login',this.formData)
         
             //对象解构赋值
            //const {data,meta:{msg,status}}=res.data
